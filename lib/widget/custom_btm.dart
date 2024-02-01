@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:taskati/core/color.dart';
+import 'package:taskati/core/utils/color.dart';
 
 class customBottom extends StatelessWidget {
   customBottom({super.key, required this.text,required this.onPressed});
@@ -15,7 +15,7 @@ class customBottom extends StatelessWidget {
         style: ElevatedButton.styleFrom(
 
             foregroundColor: Colors.white,
-            backgroundColor: primartykay,
+            backgroundColor: AppColor.primartyColor,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10)))
     )

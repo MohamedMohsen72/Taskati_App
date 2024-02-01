@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:taskati/core/color.dart';
+import 'package:taskati/core/utils/color.dart';
+import 'package:taskati/features/home/home_page.dart';
 import 'package:taskati/widget/custom_btm.dart';
 import 'package:taskati/widget/custom_textform.dart';
 
@@ -17,13 +18,13 @@ class _AddTaskState extends State<AddTask> {
     return Scaffold(backgroundColor: Color(0xfff9f9f9),
       appBar: AppBar(
         leading: IconButton(
-            onPressed: () {},
+            onPressed: () { Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homepage(),));},
             icon: Icon(Icons.arrow_back_ios_new),
-            color: primartykay),
+            color: AppColor.primartyColor),
         title: Center(
           child: Text('Add task',
               style:
-                  TextStyle(color: primartykay, fontWeight: FontWeight.bold)),
+                  TextStyle(color: AppColor.primartyColor, fontWeight: FontWeight.bold)),
         ),
       ),
       body: Padding(
@@ -98,7 +99,7 @@ class _AddTaskState extends State<AddTask> {
                         children: [
                           CircleAvatar(
                             radius: 15,
-                            backgroundColor: primartykay,
+                            backgroundColor:AppColor. primartyColor,
                           ),
                           Gap(8),
                           CircleAvatar(

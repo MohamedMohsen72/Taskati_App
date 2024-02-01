@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:taskati/core/color.dart';
+import 'package:taskati/core/utils/color.dart';
 import 'package:taskati/features/profile/Upload.dart';
 
 class DataUser extends StatefulWidget {
@@ -18,7 +18,7 @@ class _DataUserState extends State<DataUser> {
       appBar: AppBar(
           actions: [
             IconButton(
-                onPressed: () {}, icon: Icon(Icons.sunny), color: primartykay)
+                onPressed: () {}, icon: Icon(Icons.sunny), color: AppColor.primartyColor)
           ],
           leading: IconButton(
             onPressed: () {
@@ -28,7 +28,7 @@ class _DataUserState extends State<DataUser> {
               });
             },
             icon: Icon(Icons.arrow_back),
-            color: primartykay,
+            color: AppColor.primartyColor,
           )),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -42,14 +42,14 @@ class _DataUserState extends State<DataUser> {
               IconButton(
                 onPressed: () {},
                 icon: Icon(Icons.camera_alt),
-                color: primartykay,
+                color: AppColor.primartyColor,
               )
             ],
           ),
           Gap(50),
           Divider(
             thickness: 2,
-            color: primartykay,
+            color: AppColor.primartyColor,
             endIndent: 30,
             indent: 30,
           ),
@@ -62,7 +62,7 @@ class _DataUserState extends State<DataUser> {
                   'Mohamed Mohsen Eldeeb',
                   style: TextStyle(
                       fontSize: 23,fontWeight: FontWeight.bold,
-                      color: primartykay,
+                      color: AppColor.primartyColor,
                       fontFamily: GoogleFonts.poppins().fontFamily),
                 ),
                 Stack(
@@ -70,13 +70,13 @@ class _DataUserState extends State<DataUser> {
                   children: [
                     CircleAvatar(
                       radius: 22,
-                      backgroundColor: primartykay,
+                      backgroundColor: AppColor.primartyColor,
                     ),
                     CircleAvatar(
                       radius: 20,
                       backgroundColor: Colors.white,
                       child: IconButton(
-                          icon: Icon(Icons.edit, color: primartykay),
+                          icon: Icon(Icons.edit, color: AppColor.primartyColor),
                           onPressed: () {}),
                     ),
                   ],

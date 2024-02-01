@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:lottie/lottie.dart';
+import 'package:taskati/core/network/local_storage.dart';
 import 'package:taskati/features/profile/Upload.dart';
-import 'package:taskati/home_page.dart';
+import 'package:taskati/features/home/home_page.dart';
 
 class SplachPage extends StatefulWidget {
   const SplachPage({super.key});
@@ -17,8 +18,9 @@ class _SplachPageState extends State<SplachPage> {
  @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 6),() {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Uploadpage(),));
+    bool isupload =AppLocal.getCachData(AppLocal.ISUPLOAD_KEY)??false;
+    Future.delayed(Duration(seconds: 4),() {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => isupload?Homepage() :Uploadpage(),));
     },);
   }
   @override

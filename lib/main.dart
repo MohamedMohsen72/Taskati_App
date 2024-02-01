@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:taskati/features/profile/Upload.dart';
 import 'package:taskati/features/profile/splach_page.dart';
 import 'package:taskati/screen/Add_task.dart';
 
-void main() {
+Future<void> main() async {
+  await Hive.initFlutter();
+  var box = await Hive.openBox('user');
+
+
   runApp(const MyApp());
 }
 
@@ -14,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false,
-home:  AddTask (),
+home:  SplachPage (),
     );
   }
 }
