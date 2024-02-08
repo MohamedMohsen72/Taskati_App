@@ -11,7 +11,7 @@ import 'package:taskati/features/profile/data_user.dart';
 import 'package:taskati/features/home/home_page.dart';
 import 'package:taskati/widget/custom_btm.dart';
 import 'package:taskati/widget/custom_error_dialog.dart';
-import 'package:taskati/widget/custom_textform.dart';
+
 String ? path;
 String  name='';
 class Uploadpage extends StatefulWidget {
@@ -28,31 +28,31 @@ class _UploadpageState extends State<Uploadpage> {
       appBar:
           AppBar(actions: [TextButton(onPressed: () {
             if(path!=null&& name.isNotEmpty){
-              Navigator.of(context).pushReplacement( MaterialPageRoute(builder: (context) => Homepage(),));
+              Navigator.of(context).push( MaterialPageRoute(builder: (context) => const Homepage(),));
             AppLocal.CachData(AppLocal.IMAGE_KEY, path);
             AppLocal.CachData(AppLocal.NAME_KEY, name);
               AppLocal.CachData(AppLocal.ISUPLOAD_KEY, true);
             }
             else if(path==null&& name.isNotEmpty){
-              showErrorDialog(context,Text('please uploud your image'));
+              showErrorDialog(context,const Text('please uploud your image'));
             }
             else if(path!=null&& name.isEmpty){
-              showErrorDialog(context,Text('please Enter your name'));
+              showErrorDialog(context,const Text('please Enter your name'));
             }
             else {
-              showErrorDialog(context,Text('please Enter your name and uploud your image'));
+              showErrorDialog(context,const Text('please Enter your name and uploud your image'));
 
             }
           },
-              child: Text('Done'))]),
+              child: const Text('Done'))]),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           CircleAvatar(
             radius: 75,
             backgroundImage: (path!=null)?FileImage(File(path!))as ImageProvider:
-            AssetImage('assets/person-shape.png'),
+            const AssetImage('assets/person-shape.png'),
           ),
-          Gap(20),
+          const Gap(20),
           SizedBox(width: 200,height: 60,
             child: customBottom(
               onPressed: () {
@@ -61,7 +61,7 @@ class _UploadpageState extends State<Uploadpage> {
               text: 'Upload From Camera',
             ),
           ),
-          Gap(20),
+          const Gap(20),
           SizedBox(width: 200,height: 60,
             child: customBottom(
               onPressed: () {
@@ -70,14 +70,14 @@ class _UploadpageState extends State<Uploadpage> {
               text: 'Upload From Galary',
             ),
           ),
-          Gap(20),
+          const Gap(20),
           Divider(
             height: 5,
             indent: 30,
             endIndent: 30,
             color: AppColor.primartyColor,
           ),
-          Gap(10),
+          const Gap(10),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child:TextFormField( inputFormatters: [
@@ -91,7 +91,7 @@ class _UploadpageState extends State<Uploadpage> {
 
                 },
                 decoration: InputDecoration(
-                  hintText:'Enter your name',hintStyle: TextStyle(fontSize: 18),
+                  hintText:'Enter your name',hintStyle: const TextStyle(fontSize: 18),
 
                   enabledBorder:OutlineInputBorder(
 
@@ -99,13 +99,13 @@ class _UploadpageState extends State<Uploadpage> {
                       borderSide: BorderSide(color:AppColor.primartyColor)),
                   errorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(color: Colors.red)),
+                      borderSide: const BorderSide(color: Colors.red)),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: AppColor.primartyColor)),
                   disabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(color: Colors.red)),
+                      borderSide: const BorderSide(color: Colors.red)),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: AppColor.primartyColor)),

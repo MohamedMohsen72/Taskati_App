@@ -11,13 +11,13 @@ class customBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: onPressed,
-        child: Text (text,style: TextStyle(fontSize: 15)),
         style: ElevatedButton.styleFrom(
 
             foregroundColor: Colors.white,
             backgroundColor: AppColor.primartyColor,
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10)))
+                borderRadius: BorderRadius.circular(10))),
+        child: Text (text,style: const TextStyle(fontSize: 15))
     )
     ;
   }
