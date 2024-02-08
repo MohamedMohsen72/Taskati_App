@@ -53,7 +53,7 @@ class _UploadpageState extends State<Uploadpage> {
             const AssetImage('assets/person-shape.png'),
           ),
           const Gap(20),
-          SizedBox(width: 200,height: 60,
+          SizedBox(width: 220,height: 60,
             child: customBottom(
               onPressed: () {
                 uploadFromeCamera();
@@ -62,7 +62,7 @@ class _UploadpageState extends State<Uploadpage> {
             ),
           ),
           const Gap(20),
-          SizedBox(width: 200,height: 60,
+          SizedBox(width: 220,height: 60,
             child: customBottom(
               onPressed: () {
                 uploadFromeGalery();

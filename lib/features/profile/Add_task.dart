@@ -8,7 +8,7 @@ import 'package:taskati/features/home/home_page.dart';
 import 'package:taskati/widget/custom_btm.dart';
 
 
-import '../widget/themes.dart';
+import '../../core/utils/themes.dart';
 
 class AddTask extends StatefulWidget {
   const AddTask({super.key});

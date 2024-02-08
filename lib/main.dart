@@ -5,8 +5,8 @@ import 'package:taskati/core/model/task_model.dart';
 import 'package:taskati/core/utils/color.dart';
 import 'package:taskati/features/profile/Upload.dart';
 import 'package:taskati/features/profile/splach_page.dart';
-import 'package:taskati/screen/Add_task.dart';
-import 'package:taskati/widget/themes.dart';
+import 'package:taskati/features/profile/Add_task.dart';
+import 'package:taskati/core/utils/themes.dart';
 
 Future<void> main() async {
   await Hive.initFlutter();

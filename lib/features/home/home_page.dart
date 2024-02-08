@@ -12,7 +12,7 @@ import 'package:taskati/core/network/local_storage.dart';
 import 'package:taskati/core/utils/color.dart';
 import 'package:taskati/core/utils/textstyle.dart';
 import 'package:taskati/features/profile/data_user.dart';
-import 'package:taskati/screen/Add_task.dart';
+import 'package:taskati/features/profile/Add_task.dart';
 import 'package:taskati/widget/custom_btm.dart';
 
 class Homepage extends StatefulWidget {
